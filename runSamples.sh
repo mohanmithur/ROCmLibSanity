@@ -5,9 +5,14 @@ Tests=(
   "Tests/rocsolver_example_basic_cpp"
   "Tests/rocsolver_example_strided_batched"
   "Tests/rocprim_example_temporary_storage"
+  "Tests/rocsparse_example_axpyi"
+  "Tests/rocsparse_example_spmm_batched_csr"
 )
 
 for test in ${Tests[@]}; do
-  echo "Running "$test
+  echo "Running "$test" ->"
+  echo ""
   $test
+  echo "<- "$test "Completed"
+  echo ""
 done
