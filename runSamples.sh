@@ -1,5 +1,13 @@
-Tests/rocblas_example_c_dgeam
-Tests/rocblas_example_sgemm
-Tests/rocsolver_example_basic_c
-Tests/rocsolver_example_basic_cpp
-Tests/rocsolver_example_strided_batched
+Tests=(
+  "Tests/rocblas_example_c_dgeam"
+  "Tests/rocblas_example_sgemm"
+  "Tests/rocsolver_example_basic_c"
+  "Tests/rocsolver_example_basic_cpp"
+  "Tests/rocsolver_example_strided_batched"
+  "Tests/rocprim_example_temporary_storage"
+)
+
+for test in ${Tests[@]}; do
+  echo "Running "$test
+  $test
+done
