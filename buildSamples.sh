@@ -15,6 +15,10 @@ echo Building rocPRIM-example_temporary_storage.cpp
 hipcc -D__HIP_PLATFORM_AMD__ -std=c++17 rocPRIM/example_temporary_storage.cpp -o Tests/rocprim_example_temporary_storage
 echo Building rocSPARSE-example_axpyi.cpp
 hipcc -D__HIP_PLATFORM_AMD__ rocSPARSE/example_axpyi.cpp -o Tests/rocsparse_example_axpyi -lrocsparse
-echo Building example_spmm_batched_csr.cpp
+echo Building rocSPARSE-example_spmm_batched_csr.cpp
 hipcc -D__HIP_PLATFORM_AMD__ -std=c++17 rocSPARSE/example_spmm_batched_csr.cpp -o Tests/rocsparse_example_spmm_batched_csr -lrocsparse
+echo Building rocFFT-rocfft_example_callback.cpp
+hipcc -D__HIP_PLATFORM_AMD__ rocFFT/rocfft_example_callback.cpp -o Tests/rocfft_example_callback -lrocfft
+echo Building rocFFT-fixed-large-double.cpp
+hipcc -D__HIP_PLATFORM_AMD__ rocFFT/fixed-large-double.cpp -o Tests/rocfft_fixed-large-double -lrocfft
 cd ..

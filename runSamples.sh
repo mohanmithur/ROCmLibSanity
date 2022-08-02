@@ -7,6 +7,8 @@ Tests=(
   "Tests/rocprim_example_temporary_storage"
   "Tests/rocsparse_example_axpyi"
   "Tests/rocsparse_example_spmm_batched_csr"
+  "Tests/rocfft_example_callback"
+  "Tests/rocfft_fixed-large-double"
 )
 
 for test in ${Tests[@]}; do
